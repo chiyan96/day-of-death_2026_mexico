@@ -1,0 +1,1001 @@
+{
+  "generated_variants": [
+    {
+      "file": "icon_flower_c-b2e1df0f.webp",
+      "orig_dim": "1162x1162",
+      "orig_bytes": 92704,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_flower_c-b2e1df0f-96.webp",
+          "dim": "96x96",
+          "bytes": 4046
+        },
+        {
+          "w": 192,
+          "file": "icon_flower_c-b2e1df0f-192.webp",
+          "dim": "192x192",
+          "bytes": 8968
+        }
+      ]
+    },
+    {
+      "file": "day5_scenery-2273289a.png",
+      "orig_dim": "669x446",
+      "orig_bytes": 499746,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day5_scenery-2273289a-480.webp",
+          "dim": "480x320",
+          "bytes": 28828
+        }
+      ]
+    },
+    {
+      "file": "page2_day8-535bd636.webp",
+      "orig_dim": "1200x720",
+      "orig_bytes": 164026,
+      "variants": [
+        {
+          "w": 480,
+          "file": "page2_day8-535bd636-480.webp",
+          "dim": "480x288",
+          "bytes": 23098
+        },
+        {
+          "w": 960,
+          "file": "page2_day8-535bd636-960.webp",
+          "dim": "960x576",
+          "bytes": 78458
+        }
+      ]
+    },
+    {
+      "file": "bottom_day4-8eefddec.png",
+      "orig_dim": "1076x180",
+      "orig_bytes": 218552,
+      "variants": [
+        {
+          "w": 480,
+          "file": "bottom_day4-8eefddec-480.webp",
+          "dim": "480x80",
+          "bytes": 22190
+        },
+        {
+          "w": 960,
+          "file": "bottom_day4-8eefddec-960.webp",
+          "dim": "960x161",
+          "bytes": 71126
+        }
+      ]
+    },
+    {
+      "file": "pan_de_yema-c66d8394.webp",
+      "orig_dim": "1200x800",
+      "orig_bytes": 137206,
+      "variants": [
+        {
+          "w": 480,
+          "file": "pan_de_yema-c66d8394-480.webp",
+          "dim": "480x320",
+          "bytes": 30288
+        },
+        {
+          "w": 960,
+          "file": "pan_de_yema-c66d8394-960.webp",
+          "dim": "960x640",
+          "bytes": 79080
+        }
+      ]
+    },
+    {
+      "file": "page2_day1-1990ad6c.jpeg",
+      "orig_dim": "780x437",
+      "orig_bytes": 154163,
+      "variants": [
+        {
+          "w": 480,
+          "file": "page2_day1-1990ad6c-480.webp",
+          "dim": "480x269",
+          "bytes": 31834
+        }
+      ]
+    },
+    {
+      "file": "icon_wave_c-ca283e3a.png",
+      "orig_dim": "235x235",
+      "orig_bytes": 71942,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_wave_c-ca283e3a-96.webp",
+          "dim": "96x96",
+          "bytes": 5030
+        },
+        {
+          "w": 192,
+          "file": "icon_wave_c-ca283e3a-192.webp",
+          "dim": "192x192",
+          "bytes": 12946
+        }
+      ]
+    },
+    {
+      "file": "icon_plane_c-c8167d33.webp",
+      "orig_dim": "1119x1119",
+      "orig_bytes": 124930,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_plane_c-c8167d33-96.webp",
+          "dim": "96x96",
+          "bytes": 5044
+        },
+        {
+          "w": 192,
+          "file": "icon_plane_c-c8167d33-192.webp",
+          "dim": "192x192",
+          "bytes": 12138
+        }
+      ]
+    },
+    {
+      "file": "day8-535bd636.webp",
+      "orig_dim": "1200x720",
+      "orig_bytes": 157144,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day8-535bd636-480.webp",
+          "dim": "480x288",
+          "bytes": 22680
+        },
+        {
+          "w": 960,
+          "file": "day8-535bd636-960.webp",
+          "dim": "960x576",
+          "bytes": 75446
+        }
+      ]
+    },
+    {
+      "file": "journey-banner-75a7ac85.webp",
+      "orig_dim": "1600x533",
+      "orig_bytes": 96876,
+      "variants": [
+        {
+          "w": 480,
+          "file": "journey-banner-75a7ac85-480.webp",
+          "dim": "480x160",
+          "bytes": 18114
+        },
+        {
+          "w": 960,
+          "file": "journey-banner-75a7ac85-960.webp",
+          "dim": "960x320",
+          "bytes": 43586
+        }
+      ]
+    },
+    {
+      "file": "day4_scenery-81e30b50.webp",
+      "orig_dim": "1600x900",
+      "orig_bytes": 209108,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day4_scenery-81e30b50-480.webp",
+          "dim": "480x270",
+          "bytes": 16124
+        },
+        {
+          "w": 960,
+          "file": "day4_scenery-81e30b50-960.webp",
+          "dim": "960x540",
+          "bytes": 58270
+        }
+      ]
+    },
+    {
+      "file": "Icon_bus_bk-2e75de52.webp",
+      "orig_dim": "1003x1002",
+      "orig_bytes": 70154,
+      "variants": [
+        {
+          "w": 96,
+          "file": "Icon_bus_bk-2e75de52-96.webp",
+          "dim": "96x96",
+          "bytes": 3852
+        },
+        {
+          "w": 192,
+          "file": "Icon_bus_bk-2e75de52-192.webp",
+          "dim": "192x192",
+          "bytes": 8980
+        }
+      ]
+    },
+    {
+      "file": "wave-c7256c4d.png",
+      "orig_dim": "450x450",
+      "orig_bytes": 110402,
+      "variants": [
+        {
+          "w": 96,
+          "file": "wave-c7256c4d-96.webp",
+          "dim": "96x96",
+          "bytes": 3480
+        },
+        {
+          "w": 192,
+          "file": "wave-c7256c4d-192.webp",
+          "dim": "192x192",
+          "bytes": 8422
+        }
+      ]
+    },
+    {
+      "file": "page2_day5-6fac3d75.jpeg",
+      "orig_dim": "1536x1024",
+      "orig_bytes": 450703,
+      "variants": [
+        {
+          "w": 480,
+          "file": "page2_day5-6fac3d75-480.webp",
+          "dim": "480x320",
+          "bytes": 22818
+        },
+        {
+          "w": 960,
+          "file": "page2_day5-6fac3d75-960.webp",
+          "dim": "960x640",
+          "bytes": 69018
+        }
+      ]
+    },
+    {
+      "file": "day1-1990ad6c.webp",
+      "orig_dim": "780x437",
+      "orig_bytes": 93018,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day1-1990ad6c-480.webp",
+          "dim": "480x269",
+          "bytes": 31170
+        }
+      ]
+    },
+    {
+      "file": "tostadas-47d73e62.webp",
+      "orig_dim": "1600x1067",
+      "orig_bytes": 458212,
+      "variants": [
+        {
+          "w": 480,
+          "file": "tostadas-47d73e62-480.webp",
+          "dim": "480x320",
+          "bytes": 48918
+        },
+        {
+          "w": 960,
+          "file": "tostadas-47d73e62-960.webp",
+          "dim": "960x640",
+          "bytes": 154546
+        }
+      ]
+    },
+    {
+      "file": "page2_day9-112b9e6a.jpeg",
+      "orig_dim": "1000x667",
+      "orig_bytes": 172274,
+      "variants": [
+        {
+          "w": 480,
+          "file": "page2_day9-112b9e6a-480.webp",
+          "dim": "480x320",
+          "bytes": 59216
+        },
+        {
+          "w": 960,
+          "file": "page2_day9-112b9e6a-960.webp",
+          "dim": "960x640",
+          "bytes": 160284
+        }
+      ]
+    },
+    {
+      "file": "banner_top-42467f44.png",
+      "orig_dim": "1240x337",
+      "orig_bytes": 414993,
+      "variants": [
+        {
+          "w": 480,
+          "file": "banner_top-42467f44-480.webp",
+          "dim": "480x130",
+          "bytes": 29436
+        },
+        {
+          "w": 960,
+          "file": "banner_top-42467f44-960.webp",
+          "dim": "960x261",
+          "bytes": 92506
+        }
+      ]
+    },
+    {
+      "file": "day6-882bd4ab.webp",
+      "orig_dim": "960x1286",
+      "orig_bytes": 219356,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day6-882bd4ab-480.webp",
+          "dim": "480x643",
+          "bytes": 63804
+        }
+      ]
+    },
+    {
+      "file": "bottom_day3-ca61595b.png",
+      "orig_dim": "1076x170",
+      "orig_bytes": 214123,
+      "variants": [
+        {
+          "w": 480,
+          "file": "bottom_day3-ca61595b-480.webp",
+          "dim": "480x76",
+          "bytes": 22322
+        },
+        {
+          "w": 960,
+          "file": "bottom_day3-ca61595b-960.webp",
+          "dim": "960x152",
+          "bytes": 69208
+        }
+      ]
+    },
+    {
+      "file": "ofrenda-cbcf374a.webp",
+      "orig_dim": "1024x680",
+      "orig_bytes": 121326,
+      "variants": [
+        {
+          "w": 480,
+          "file": "ofrenda-cbcf374a-480.webp",
+          "dim": "480x319",
+          "bytes": 30532
+        },
+        {
+          "w": 960,
+          "file": "ofrenda-cbcf374a-960.webp",
+          "dim": "960x638",
+          "bytes": 83846
+        }
+      ]
+    },
+    {
+      "file": "bottom_day7-cb4852d8.png",
+      "orig_dim": "1076x170",
+      "orig_bytes": 215116,
+      "variants": [
+        {
+          "w": 480,
+          "file": "bottom_day7-cb4852d8-480.webp",
+          "dim": "480x76",
+          "bytes": 22340
+        },
+        {
+          "w": 960,
+          "file": "bottom_day7-cb4852d8-960.webp",
+          "dim": "960x152",
+          "bytes": 72124
+        }
+      ]
+    },
+    {
+      "file": "icon_hotel-ddeabad9.webp",
+      "orig_dim": "1254x1254",
+      "orig_bytes": 178600,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_hotel-ddeabad9-96.webp",
+          "dim": "96x96",
+          "bytes": 5590
+        },
+        {
+          "w": 192,
+          "file": "icon_hotel-ddeabad9-192.webp",
+          "dim": "192x192",
+          "bytes": 14830
+        }
+      ]
+    },
+    {
+      "file": "day6_scenery-32913082.webp",
+      "orig_dim": "780x437",
+      "orig_bytes": 94586,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day6_scenery-32913082-480.webp",
+          "dim": "480x269",
+          "bytes": 31402
+        }
+      ]
+    },
+    {
+      "file": "day7_scenery-f1e6f476.webp",
+      "orig_dim": "1024x720",
+      "orig_bytes": 244452,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day7_scenery-f1e6f476-480.webp",
+          "dim": "480x338",
+          "bytes": 53214
+        },
+        {
+          "w": 960,
+          "file": "day7_scenery-f1e6f476-960.webp",
+          "dim": "960x675",
+          "bytes": 167452
+        }
+      ]
+    },
+    {
+      "file": "day6_scenery-e726c50f.webp",
+      "orig_dim": "1080x720",
+      "orig_bytes": 116652,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day6_scenery-e726c50f-480.webp",
+          "dim": "480x320",
+          "bytes": 38956
+        },
+        {
+          "w": 960,
+          "file": "day6_scenery-e726c50f-960.webp",
+          "dim": "960x640",
+          "bytes": 98018
+        }
+      ]
+    },
+    {
+      "file": "page2_day3-664c4d51.webp",
+      "orig_dim": "1200x800",
+      "orig_bytes": 184176,
+      "variants": [
+        {
+          "w": 480,
+          "file": "page2_day3-664c4d51-480.webp",
+          "dim": "480x320",
+          "bytes": 30862
+        },
+        {
+          "w": 960,
+          "file": "page2_day3-664c4d51-960.webp",
+          "dim": "960x640",
+          "bytes": 102408
+        }
+      ]
+    },
+    {
+      "file": "day3-664c4d51.webp",
+      "orig_dim": "1200x800",
+      "orig_bytes": 180858,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day3-664c4d51-480.webp",
+          "dim": "480x320",
+          "bytes": 30698
+        },
+        {
+          "w": 960,
+          "file": "day3-664c4d51-960.webp",
+          "dim": "960x640",
+          "bytes": 102088
+        }
+      ]
+    },
+    {
+      "file": "bottom_day2-5cd331a4.png",
+      "orig_dim": "1076x160",
+      "orig_bytes": 204316,
+      "variants": [
+        {
+          "w": 480,
+          "file": "bottom_day2-5cd331a4-480.webp",
+          "dim": "480x71",
+          "bytes": 21452
+        },
+        {
+          "w": 960,
+          "file": "bottom_day2-5cd331a4-960.webp",
+          "dim": "960x143",
+          "bytes": 67112
+        }
+      ]
+    },
+    {
+      "file": "icon_tel-b14ea5ca.webp",
+      "orig_dim": "1536x1024",
+      "orig_bytes": 78754,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_tel-b14ea5ca-96.webp",
+          "dim": "96x64",
+          "bytes": 3006
+        },
+        {
+          "w": 192,
+          "file": "icon_tel-b14ea5ca-192.webp",
+          "dim": "192x128",
+          "bytes": 6570
+        }
+      ]
+    },
+    {
+      "file": "day9_scenery-bf76458a.webp",
+      "orig_dim": "1500x849",
+      "orig_bytes": 563220,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day9_scenery-bf76458a-480.webp",
+          "dim": "480x272",
+          "bytes": 54602
+        },
+        {
+          "w": 960,
+          "file": "day9_scenery-bf76458a-960.webp",
+          "dim": "960x543",
+          "bytes": 194720
+        }
+      ]
+    },
+    {
+      "file": "bottom_day6-218d3614.png",
+      "orig_dim": "1076x170",
+      "orig_bytes": 207976,
+      "variants": [
+        {
+          "w": 480,
+          "file": "bottom_day6-218d3614-480.webp",
+          "dim": "480x76",
+          "bytes": 21510
+        },
+        {
+          "w": 960,
+          "file": "bottom_day6-218d3614-960.webp",
+          "dim": "960x152",
+          "bytes": 64220
+        }
+      ]
+    },
+    {
+      "file": "day2_scenery-294b55f1.webp",
+      "orig_dim": "1600x1066",
+      "orig_bytes": 205352,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day2_scenery-294b55f1-480.webp",
+          "dim": "480x320",
+          "bytes": 19958
+        },
+        {
+          "w": 960,
+          "file": "day2_scenery-294b55f1-960.webp",
+          "dim": "960x640",
+          "bytes": 69700
+        }
+      ]
+    },
+    {
+      "file": "sk-6f813830.png",
+      "orig_dim": "410x410",
+      "orig_bytes": 108848,
+      "variants": [
+        {
+          "w": 96,
+          "file": "sk-6f813830-96.webp",
+          "dim": "96x96",
+          "bytes": 3858
+        },
+        {
+          "w": 192,
+          "file": "sk-6f813830-192.webp",
+          "dim": "192x192",
+          "bytes": 10182
+        }
+      ]
+    },
+    {
+      "file": "icon_hat-c420adf2.webp",
+      "orig_dim": "1254x1254",
+      "orig_bytes": 128786,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_hat-c420adf2-96.webp",
+          "dim": "96x96",
+          "bytes": 4688
+        },
+        {
+          "w": 192,
+          "file": "icon_hat-c420adf2-192.webp",
+          "dim": "192x192",
+          "bytes": 11060
+        }
+      ]
+    },
+    {
+      "file": "tree-1afdb4de.png",
+      "orig_dim": "413x413",
+      "orig_bytes": 78777,
+      "variants": [
+        {
+          "w": 96,
+          "file": "tree-1afdb4de-96.webp",
+          "dim": "96x96",
+          "bytes": 2838
+        },
+        {
+          "w": 192,
+          "file": "tree-1afdb4de-192.webp",
+          "dim": "192x192",
+          "bytes": 6762
+        }
+      ]
+    },
+    {
+      "file": "icon_bus-d74f8a75.webp",
+      "orig_dim": "958x958",
+      "orig_bytes": 60678,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_bus-d74f8a75-96.webp",
+          "dim": "96x96",
+          "bytes": 4356
+        },
+        {
+          "w": 192,
+          "file": "icon_bus-d74f8a75-192.webp",
+          "dim": "192x192",
+          "bytes": 9538
+        }
+      ]
+    },
+    {
+      "file": "bottom_day5-53956161.png",
+      "orig_dim": "1076x160",
+      "orig_bytes": 212921,
+      "variants": [
+        {
+          "w": 480,
+          "file": "bottom_day5-53956161-480.webp",
+          "dim": "480x71",
+          "bytes": 21824
+        },
+        {
+          "w": 960,
+          "file": "bottom_day5-53956161-960.webp",
+          "dim": "960x143",
+          "bytes": 66794
+        }
+      ]
+    },
+    {
+      "file": "hill-f1294b92.png",
+      "orig_dim": "327x327",
+      "orig_bytes": 53602,
+      "variants": [
+        {
+          "w": 96,
+          "file": "hill-f1294b92-96.webp",
+          "dim": "96x96",
+          "bytes": 2822
+        },
+        {
+          "w": 192,
+          "file": "hill-f1294b92-192.webp",
+          "dim": "192x192",
+          "bytes": 7416
+        }
+      ]
+    },
+    {
+      "file": "his-3e9ba4ed.png",
+      "orig_dim": "446x446",
+      "orig_bytes": 98688,
+      "variants": [
+        {
+          "w": 96,
+          "file": "his-3e9ba4ed-96.webp",
+          "dim": "96x96",
+          "bytes": 3286
+        },
+        {
+          "w": 192,
+          "file": "his-3e9ba4ed-192.webp",
+          "dim": "192x192",
+          "bytes": 7386
+        }
+      ]
+    },
+    {
+      "file": "icon_taco-9abe828e.webp",
+      "orig_dim": "1254x1254",
+      "orig_bytes": 63310,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_taco-9abe828e-96.webp",
+          "dim": "96x96",
+          "bytes": 3888
+        },
+        {
+          "w": 192,
+          "file": "icon_taco-9abe828e-192.webp",
+          "dim": "192x192",
+          "bytes": 7470
+        }
+      ]
+    },
+    {
+      "file": "day3_scenery-e36238fd.png",
+      "orig_dim": "678x452",
+      "orig_bytes": 395868,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day3_scenery-e36238fd-480.webp",
+          "dim": "480x320",
+          "bytes": 23610
+        }
+      ]
+    },
+    {
+      "file": "page2_day6-882bd4ab.jpeg",
+      "orig_dim": "960x1286",
+      "orig_bytes": 392649,
+      "variants": [
+        {
+          "w": 480,
+          "file": "page2_day6-882bd4ab-480.webp",
+          "dim": "480x643",
+          "bytes": 65904
+        }
+      ]
+    },
+    {
+      "file": "taco-97842e31.png",
+      "orig_dim": "456x456",
+      "orig_bytes": 98441,
+      "variants": [
+        {
+          "w": 96,
+          "file": "taco-97842e31-96.webp",
+          "dim": "96x96",
+          "bytes": 2978
+        },
+        {
+          "w": 192,
+          "file": "taco-97842e31-192.webp",
+          "dim": "192x192",
+          "bytes": 7602
+        }
+      ]
+    },
+    {
+      "file": "flower-ad9369aa.png",
+      "orig_dim": "418x418",
+      "orig_bytes": 102505,
+      "variants": [
+        {
+          "w": 96,
+          "file": "flower-ad9369aa-96.webp",
+          "dim": "96x96",
+          "bytes": 4906
+        },
+        {
+          "w": 192,
+          "file": "flower-ad9369aa-192.webp",
+          "dim": "192x192",
+          "bytes": 11634
+        }
+      ]
+    },
+    {
+      "file": "plane-ebb19a8e.png",
+      "orig_dim": "437x437",
+      "orig_bytes": 97067,
+      "variants": [
+        {
+          "w": 96,
+          "file": "plane-ebb19a8e-96.webp",
+          "dim": "96x96",
+          "bytes": 3228
+        },
+        {
+          "w": 192,
+          "file": "plane-ebb19a8e-192.webp",
+          "dim": "192x192",
+          "bytes": 8208
+        }
+      ]
+    },
+    {
+      "file": "day5-6fac3d75.webp",
+      "orig_dim": "1536x1024",
+      "orig_bytes": 182150,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day5-6fac3d75-480.webp",
+          "dim": "480x320",
+          "bytes": 22624
+        },
+        {
+          "w": 960,
+          "file": "day5-6fac3d75-960.webp",
+          "dim": "960x640",
+          "bytes": 66986
+        }
+      ]
+    },
+    {
+      "file": "tri-552fbec5.png",
+      "orig_dim": "340x340",
+      "orig_bytes": 37351,
+      "variants": [
+        {
+          "w": 96,
+          "file": "tri-552fbec5-96.webp",
+          "dim": "96x96",
+          "bytes": 3860
+        },
+        {
+          "w": 192,
+          "file": "tri-552fbec5-192.webp",
+          "dim": "192x192",
+          "bytes": 8366
+        }
+      ]
+    },
+    {
+      "file": "day8_scenery-68fea4f2.webp",
+      "orig_dim": "1200x800",
+      "orig_bytes": 229774,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day8_scenery-68fea4f2-480.webp",
+          "dim": "480x320",
+          "bytes": 56130
+        },
+        {
+          "w": 960,
+          "file": "day8_scenery-68fea4f2-960.webp",
+          "dim": "960x640",
+          "bytes": 140476
+        }
+      ]
+    },
+    {
+      "file": "image_frame-f927bb8e.webp",
+      "orig_dim": "1600x841",
+      "orig_bytes": 50714,
+      "variants": [
+        {
+          "w": 480,
+          "file": "image_frame-f927bb8e-480.webp",
+          "dim": "480x252",
+          "bytes": 9184
+        },
+        {
+          "w": 960,
+          "file": "image_frame-f927bb8e-960.webp",
+          "dim": "960x505",
+          "bytes": 23650
+        }
+      ]
+    },
+    {
+      "file": "bottom_day1-3565aa9e.png",
+      "orig_dim": "1241x107",
+      "orig_bytes": 205882,
+      "variants": [
+        {
+          "w": 480,
+          "file": "bottom_day1-3565aa9e-480.webp",
+          "dim": "480x41",
+          "bytes": 17854
+        },
+        {
+          "w": 960,
+          "file": "bottom_day1-3565aa9e-960.webp",
+          "dim": "960x83",
+          "bytes": 55168
+        }
+      ]
+    },
+    {
+      "file": "icon_sk_day1-94c7253d.webp",
+      "orig_dim": "1065x1065",
+      "orig_bytes": 91698,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_sk_day1-94c7253d-96.webp",
+          "dim": "96x96",
+          "bytes": 5298
+        },
+        {
+          "w": 192,
+          "file": "icon_sk_day1-94c7253d-192.webp",
+          "dim": "192x192",
+          "bytes": 11668
+        }
+      ]
+    },
+    {
+      "file": "icon_goodtoknow-a3cd6540.png",
+      "orig_dim": "512x512",
+      "orig_bytes": 20570,
+      "variants": [
+        {
+          "w": 96,
+          "file": "icon_goodtoknow-a3cd6540-96.webp",
+          "dim": "96x96",
+          "bytes": 2048
+        },
+        {
+          "w": 192,
+          "file": "icon_goodtoknow-a3cd6540-192.webp",
+          "dim": "192x192",
+          "bytes": 4706
+        }
+      ]
+    },
+    {
+      "file": "landing-artwork-f53d3055.png",
+      "orig_dim": "852x1846",
+      "orig_bytes": 1034233,
+      "variants": [
+        {
+          "w": 480,
+          "file": "landing-artwork-f53d3055-480.webp",
+          "dim": "480x1040",
+          "bytes": 52768
+        }
+      ]
+    },
+    {
+      "file": "day9-112b9e6a.webp",
+      "orig_dim": "1000x667",
+      "orig_bytes": 196856,
+      "variants": [
+        {
+          "w": 480,
+          "file": "day9-112b9e6a-480.webp",
+          "dim": "480x320",
+          "bytes": 58344
+        },
+        {
+          "w": 960,
+          "file": "day9-112b9e6a-960.webp",
+          "dim": "960x640",
+          "bytes": 158876
+        }
+      ]
+    }
+  ]
+}

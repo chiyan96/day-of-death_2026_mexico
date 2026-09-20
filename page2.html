@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Our Journey</title>
+<style>
+    *{box-sizing:border-box}
+    html,body{margin:0;min-width:0;background:#000;color:#fff}
+    body{
+      font-family:"Trebuchet MS",Trebuchet,Arial,sans-serif;
+      overflow-x:hidden;
+    }
+
+    /* Mobile-first page shell: normal flow + natural vertical scrolling. */
+    .app{
+      width:100%;
+      max-width:480px;
+      min-height:100dvh;
+      margin-inline:auto;
+      background:#000;
+      padding:
+        max(12px,env(safe-area-inset-top))
+        clamp(10px,3.6vw,18px)
+        max(26px,env(safe-area-inset-bottom));
+    }
+
+    /* Responsive header. No document-level absolute positioning. */
+    .top{
+      display:grid;
+      grid-template-columns:44px minmax(0,1fr) 44px;
+      align-items:center;
+      min-height:44px;
+    }
+    .back{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      justify-self:start;
+      color:#fff;
+      text-decoration:none;
+      border-radius:50%;
+      font-size:32px;
+      line-height:1;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .back:focus-visible{outline:2px solid #fff;outline-offset:2px}
+    .back:active{background:rgba(255,255,255,.10)}
+
+    h1{
+      margin:0;
+      min-width:0;
+      text-align:center;
+      font-size:clamp(19px,5.1vw,22px);
+      line-height:1.15;
+    }
+    .sub{
+      margin:clamp(5px,1.8vw,9px) 0 clamp(3px,1.3vw,6px);
+      text-align:center;
+      font-size:clamp(11px,3.3vw,13px);
+      line-height:1.35;
+    }
+
+    /* Banner keeps its native ratio and never creates horizontal overflow. */
+    .route{
+      display:block;
+      width:100%;
+      max-width:100%;
+      height:auto;
+      margin:0 auto clamp(7px,2vw,10px);
+    }
+
+    .days{
+      display:flex;
+      flex-direction:column;
+      gap:clamp(7px,2vw,9px);
+    }
+
+    /*
+      Same card design, now fluid:
+      DAY | divider | information | responsive right-side photo.
+      minmax(0,...) is important: it prevents text/grid content from forcing
+      the card wider than the viewport.
+    */
+    .card{
+      --card-color:#ff5b83;
+      width:100%;
+      min-width:0;
+      height:clamp(68px,18vw,78px);
+      border:0;
+      border-radius:clamp(10px,2.8vw,12px);
+      padding:0;
+      display:grid;
+      grid-template-columns:
+        clamp(39px,11vw,48px)
+        1px
+        minmax(0,1.28fr)
+        minmax(92px,.92fr);
+      align-items:center;
+      color:#000;
+      text-align:left;
+      font-family:inherit;
+      cursor:pointer;
+      overflow:hidden;
+      position:relative;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .pink{
+      --card-color:#ff5b83;
+      background:linear-gradient(100deg,#ff3372,#ff5b83);
+    }
+    .yellow{
+      --card-color:#ffd34d;
+      background:linear-gradient(100deg,#ffbd25,#ffd34d);
+    }
+    .cyan{
+      --card-color:#55d4ce;
+      background:linear-gradient(100deg,#20c3c5,#55d4ce);
+    }
+
+    .dn{
+      min-width:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      line-height:1;
+      padding-left:clamp(2px,1vw,5px);
+      transform:translateX(2px);
+    }
+    .dn b{
+      margin-bottom:3px;
+      font-size:clamp(12px,2.8vw,13px);
+    }
+    .dn strong{
+      font-size:clamp(23px,6.1vw,27px);
+      font-weight:700;
+    }
+
+    .divider{
+      width:1px;
+      height:68%;
+      background:#111;
+      justify-self:center;
+    }
+
+    .info{
+      min-width:0;
+      align-self:stretch;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:
+        clamp(5px,1.4vw,7px)
+        clamp(4px,1.2vw,7px)
+        clamp(5px,1.4vw,7px)
+        clamp(7px,2.3vw,11px);
+      z-index:2;
+      transform:translateX(2px);
+    }
+    .place{
+      display:block;
+      min-width:0;
+      margin-bottom:clamp(5px,1.6vw,8px);
+      font-size:clamp(13.5px,3.3vw,15px);
+      line-height:1.05;
+      font-weight:700;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .icons{
+      min-width:0;
+      height:clamp(20px,5.8vw,24px);
+      display:flex;
+      gap:clamp(6px,2.3vw,10px);
+      align-items:center;
+    }
+    .icons img{
+      flex:0 0 auto;
+      width:clamp(19px,5.6vw,23px);
+      height:clamp(19px,5.6vw,23px);
+      object-fit:contain;
+    }
+
+    .photo{
+      align-self:stretch;
+      min-width:0;
+      width:100%;
+      background-size:cover;
+      background-position:center;
+      position:relative;
+    }
+    /* Existing color-to-photo blend, made independent of fixed widths. */
+    .photo::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(
+        90deg,
+        var(--card-color) 0%,
+        color-mix(in srgb,var(--card-color) 72%,transparent) 18%,
+        transparent 52%
+      );
+      pointer-events:none;
+    }
+
+    .chev{
+      position:absolute;
+      right:clamp(6px,2vw,9px);
+      top:50%;
+      transform:translateY(-50%);
+      z-index:4;
+      color:#000;
+      font-size:clamp(36px,9vw,42px);
+      line-height:1;
+      text-shadow:none;
+      pointer-events:none;
+    }
+
+    /* Small phones: preserve design while allocating enough width to text. */
+    @media (max-width:350px){
+      .app{padding-inline:9px}
+      .card{
+        grid-template-columns:38px 1px minmax(0,1.38fr) minmax(78px,.82fr);
+      }
+      .info{padding-left:7px;padding-right:3px}
+      .icons{gap:5px}
+      .place{font-size:13.5px}
+    }
+
+    /* Tablet/desktop: keep the mobile itinerary identity instead of stretching. */
+    @media (min-width:600px){
+      .app{max-width:500px;padding-inline:20px}
+      .card{height:78px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto!important}
+    }
+  </style>
+<link href="../shared/transitions.css" rel="stylesheet"/><script defer="True" src="../shared/transitions.js"></script><style>.card,.card .dn,.card .info,.card .place{color:#000000 !important}.card{text-decoration:none}</style></head>
+<body>
+<main class="app" data-nav-surface="">
+<header>
+<div class="top">
+<a aria-label="Back to landing page" class="back" href="../index.html">‹</a>
+<h1>Our Journey</h1>
+<span aria-hidden="true"></span>
+</div>
+<p class="sub">9 Days • 3 Cities • One Unforgettable Culture</p>
+<img alt="PVR to MEX to OAX to MEX to PVR route" class="route" decoding="async" height="533" sizes="(max-width: 430px) 100vw, 430px" src="../assets_unified/journey-banner-75a7ac85-960.webp" srcset="../assets_unified/journey-banner-75a7ac85-480.webp 480w, ../assets_unified/journey-banner-75a7ac85-960.webp 960w" width="1600"/>
+</header>
+<section aria-label="Nine-day itinerary" class="days">
+<a class="card pink" data-transition="flip-open" href="../day1/day1.html">
+<div class="dn"><b>DAY</b><strong>01</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Puerto Vallarta (PVR)</b><div class="icons"><img alt="" decoding="async" height="437" loading="lazy" sizes="64px" src="../assets_unified/plane-ebb19a8e-96.webp" srcset="../assets_unified/plane-ebb19a8e-96.webp 96w, ../assets_unified/plane-ebb19a8e-192.webp 192w" width="437"/><img alt="" decoding="async" height="450" loading="lazy" sizes="64px" src="../assets_unified/wave-c7256c4d-96.webp" srcset="../assets_unified/wave-c7256c4d-96.webp 96w, ../assets_unified/wave-c7256c4d-192.webp 192w" width="450"/><img alt="" decoding="async" height="413" loading="lazy" sizes="64px" src="../assets_unified/tree-1afdb4de-96.webp" srcset="../assets_unified/tree-1afdb4de-96.webp 96w, ../assets_unified/tree-1afdb4de-192.webp 192w" width="413"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/page2_day1-1990ad6c-480.webp')"></div><span class="chev">›</span>
+</a>
+<a class="card yellow" data-transition="flip-open" href="../day2/day2.html">
+<div class="dn"><b>DAY</b><strong>02</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Puerto Vallarta (PVR)</b><div class="icons"><img alt="" decoding="async" height="410" loading="lazy" sizes="64px" src="../assets_unified/sk-6f813830-96.webp" srcset="../assets_unified/sk-6f813830-96.webp 96w, ../assets_unified/sk-6f813830-192.webp 192w" width="410"/><img alt="" decoding="async" height="456" loading="lazy" sizes="64px" src="../assets_unified/taco-97842e31-96.webp" srcset="../assets_unified/taco-97842e31-96.webp 96w, ../assets_unified/taco-97842e31-192.webp 192w" width="456"/><img alt="" decoding="async" height="327" loading="lazy" sizes="64px" src="../assets_unified/hill-f1294b92-96.webp" srcset="../assets_unified/hill-f1294b92-96.webp 96w, ../assets_unified/hill-f1294b92-192.webp 192w" width="327"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/day2-733f9b9a.jpeg')"></div><span class="chev">›</span>
+</a>
+<a class="card cyan" data-transition="flip-open" href="../day3/day3.html">
+<div class="dn"><b>DAY</b><strong>03</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Mexico City (MEX)</b><div class="icons"><img alt="" decoding="async" height="437" loading="lazy" sizes="64px" src="../assets_unified/plane-ebb19a8e-96.webp" srcset="../assets_unified/plane-ebb19a8e-96.webp 96w, ../assets_unified/plane-ebb19a8e-192.webp 192w" width="437"/><img alt="" decoding="async" height="446" loading="lazy" sizes="64px" src="../assets_unified/his-3e9ba4ed-96.webp" srcset="../assets_unified/his-3e9ba4ed-96.webp 96w, ../assets_unified/his-3e9ba4ed-192.webp 192w" width="446"/><img alt="" decoding="async" height="456" loading="lazy" sizes="64px" src="../assets_unified/taco-97842e31-96.webp" srcset="../assets_unified/taco-97842e31-96.webp 96w, ../assets_unified/taco-97842e31-192.webp 192w" width="456"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/page2_day3-664c4d51-480.webp')"></div><span class="chev">›</span>
+</a>
+<a class="card pink" data-transition="flip-open" href="../day4/day4.html">
+<div class="dn"><b>DAY</b><strong>04</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Mexico City (MEX)</b><div class="icons"><img alt="" decoding="async" height="410" loading="lazy" sizes="64px" src="../assets_unified/sk-6f813830-96.webp" srcset="../assets_unified/sk-6f813830-96.webp 96w, ../assets_unified/sk-6f813830-192.webp 192w" width="410"/><img alt="" decoding="async" height="340" loading="lazy" sizes="64px" src="../assets_unified/tri-552fbec5-96.webp" srcset="../assets_unified/tri-552fbec5-96.webp 96w, ../assets_unified/tri-552fbec5-192.webp 192w" width="340"/><img alt="" decoding="async" height="327" loading="lazy" sizes="64px" src="../assets_unified/hill-f1294b92-96.webp" srcset="../assets_unified/hill-f1294b92-96.webp 96w, ../assets_unified/hill-f1294b92-192.webp 192w" width="327"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/day4-ee5dd01f.jpeg')"></div><span class="chev">›</span>
+</a>
+<a class="card yellow" data-transition="flip-open" href="../day5/day5.html">
+<div class="dn"><b>DAY</b><strong>05</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Mexico City (MEX)</b><div class="icons"><img alt="" decoding="async" height="446" loading="lazy" sizes="64px" src="../assets_unified/his-3e9ba4ed-96.webp" srcset="../assets_unified/his-3e9ba4ed-96.webp 96w, ../assets_unified/his-3e9ba4ed-192.webp 192w" width="446"/><img alt="" decoding="async" height="410" loading="lazy" sizes="64px" src="../assets_unified/sk-6f813830-96.webp" srcset="../assets_unified/sk-6f813830-96.webp 96w, ../assets_unified/sk-6f813830-192.webp 192w" width="410"/><img alt="" decoding="async" height="456" loading="lazy" sizes="64px" src="../assets_unified/taco-97842e31-96.webp" srcset="../assets_unified/taco-97842e31-96.webp 96w, ../assets_unified/taco-97842e31-192.webp 192w" width="456"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/page2_day5-6fac3d75-480.webp')"></div><span class="chev">›</span>
+</a>
+<a class="card cyan" data-transition="flip-open" href="../day6/day6.html">
+<div class="dn"><b>DAY</b><strong>06</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Oaxaca</b><div class="icons"><img alt="" decoding="async" height="410" loading="lazy" sizes="64px" src="../assets_unified/sk-6f813830-96.webp" srcset="../assets_unified/sk-6f813830-96.webp 96w, ../assets_unified/sk-6f813830-192.webp 192w" width="410"/><img alt="" decoding="async" height="418" loading="lazy" sizes="64px" src="../assets_unified/flower-ad9369aa-96.webp" srcset="../assets_unified/flower-ad9369aa-96.webp 96w, ../assets_unified/flower-ad9369aa-192.webp 192w" width="418"/><img alt="" decoding="async" height="327" loading="lazy" sizes="64px" src="../assets_unified/hill-f1294b92-96.webp" srcset="../assets_unified/hill-f1294b92-96.webp 96w, ../assets_unified/hill-f1294b92-192.webp 192w" width="327"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/page2_day6-882bd4ab-480.webp')"></div><span class="chev">›</span>
+</a>
+<a class="card pink" data-transition="flip-open" href="../day7/day7.html">
+<div class="dn"><b>DAY</b><strong>07</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Oaxaca</b><div class="icons"><img alt="" decoding="async" height="410" loading="lazy" sizes="64px" src="../assets_unified/sk-6f813830-96.webp" srcset="../assets_unified/sk-6f813830-96.webp 96w, ../assets_unified/sk-6f813830-192.webp 192w" width="410"/><img alt="" decoding="async" height="418" loading="lazy" sizes="64px" src="../assets_unified/flower-ad9369aa-96.webp" srcset="../assets_unified/flower-ad9369aa-96.webp 96w, ../assets_unified/flower-ad9369aa-192.webp 192w" width="418"/><img alt="" decoding="async" height="327" loading="lazy" sizes="64px" src="../assets_unified/hill-f1294b92-96.webp" srcset="../assets_unified/hill-f1294b92-96.webp 96w, ../assets_unified/hill-f1294b92-192.webp 192w" width="327"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/day7-662962b2.jpeg')"></div><span class="chev">›</span>
+</a>
+<a class="card yellow" data-transition="flip-open" href="../day8/day8.html">
+<div class="dn"><b>DAY</b><strong>08</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Mexico City (MEX)</b><div class="icons"><img alt="" decoding="async" height="410" loading="lazy" sizes="64px" src="../assets_unified/sk-6f813830-96.webp" srcset="../assets_unified/sk-6f813830-96.webp 96w, ../assets_unified/sk-6f813830-192.webp 192w" width="410"/><img alt="" decoding="async" height="446" loading="lazy" sizes="64px" src="../assets_unified/his-3e9ba4ed-96.webp" srcset="../assets_unified/his-3e9ba4ed-96.webp 96w, ../assets_unified/his-3e9ba4ed-192.webp 192w" width="446"/><img alt="" decoding="async" height="418" loading="lazy" sizes="64px" src="../assets_unified/flower-ad9369aa-96.webp" srcset="../assets_unified/flower-ad9369aa-96.webp 96w, ../assets_unified/flower-ad9369aa-192.webp 192w" width="418"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/page2_day8-535bd636-480.webp')"></div><span class="chev">›</span>
+</a>
+<a class="card cyan" data-transition="flip-open" href="../day9/day9.html">
+<div class="dn"><b>DAY</b><strong>09</strong></div><i class="divider"></i>
+<div class="info"><b class="place">Puerto Vallarta (PVR)</b><div class="icons"><img alt="" decoding="async" height="437" loading="lazy" sizes="64px" src="../assets_unified/plane-ebb19a8e-96.webp" srcset="../assets_unified/plane-ebb19a8e-96.webp 96w, ../assets_unified/plane-ebb19a8e-192.webp 192w" width="437"/><img alt="" decoding="async" height="450" loading="lazy" sizes="64px" src="../assets_unified/wave-c7256c4d-96.webp" srcset="../assets_unified/wave-c7256c4d-96.webp 96w, ../assets_unified/wave-c7256c4d-192.webp 192w" width="450"/><img alt="" decoding="async" height="413" loading="lazy" sizes="64px" src="../assets_unified/tree-1afdb4de-96.webp" srcset="../assets_unified/tree-1afdb4de-96.webp 96w, ../assets_unified/tree-1afdb4de-192.webp 192w" width="413"/></div></div>
+<div aria-hidden="true" class="photo" style="background-image:url('../assets_unified/page2_day9-112b9e6a-480.webp')"></div><span class="chev">›</span>
+</a>
+</section>
+</main>
+</body>
+</html>

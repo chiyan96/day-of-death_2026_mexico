@@ -1,0 +1,100 @@
+*{box-sizing:border-box}
+html,body{margin:0;background:#000}
+body{
+  min-width:320px;
+  color:#fff;
+  font-family:"Trebuchet MS",Trebuchet,Arial,sans-serif;
+}
+
+/* Width controls the composition. The artwork's natural ratio controls height. */
+.landing{
+  position:relative;
+  isolation:isolate;
+  width:100%;
+  max-width:520px;
+  margin-inline:auto;
+  background:#000;
+  /* intentionally no 100vh/100dvh height and no overflow:hidden */
+}
+
+/* In normal flow: this element establishes the landing section height. */
+.landing-artwork{
+  position:relative;
+  z-index:0;
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  pointer-events:none;
+  user-select:none;
+}
+
+.menu-toggle{
+  position:absolute;z-index:4;
+  top:max(14px,calc(env(safe-area-inset-top) + 8px));
+  left:max(14px,calc(env(safe-area-inset-left) + 8px));
+  width:44px;height:44px;border:0;background:rgba(0,0,0,.2);
+  border-radius:8px;padding:11px;display:grid;align-content:center;gap:5px
+}
+.menu-toggle span{width:100%;height:2px;background:#fff;border-radius:2px;transition:.2s}
+.menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.menu{
+  position:absolute;z-index:3;
+  top:max(64px,calc(env(safe-area-inset-top) + 58px));
+  left:max(14px,calc(env(safe-area-inset-left) + 8px));
+  width:min(190px,calc(100% - 28px));padding:7px;border:1px solid #333;
+  border-radius:12px;background:rgba(8,8,8,.96);opacity:0;visibility:hidden;
+  transform:translateY(-6px);transition:.18s
+}
+.menu.open{opacity:1;visibility:visible;transform:none}
+.menu a,.menu button{
+  display:flex;width:100%;min-height:44px;align-items:center;padding:8px 12px;
+  border:0;border-radius:8px;background:transparent;color:#fff;text-decoration:none;font:inherit
+}
+.menu a:hover,.menu button:hover{background:#222}
+
+/* Overlay uses the full natural artwork/landing height as its coordinate system. */
+.landing-content{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+}
+
+/* One group; top is a percentage of ARTWORK height, never viewport height. */
+.landing-info{
+  position:absolute;
+  left:50%;
+  top:72.7%;
+  width:calc(100% - clamp(28px,9vw,48px));
+  max-width:360px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:clamp(11px,3.2vw,18px);
+  transform:translate(-50%,-50%);
+  pointer-events:auto;
+}
+.tagline{
+  max-width:330px;margin:0;
+  font-size:clamp(14px,3.7vw,16px);
+  line-height:1.45;text-wrap:balance
+}
+.dates{margin:0;font-size:clamp(15px,4vw,17px);font-weight:700}
+.cta{
+  width:min(100%,240px);min-height:52px;margin-top:clamp(1px,1vw,4px);
+  padding:12px 22px;border-radius:999px;background:#ffb51b;color:#050505;
+  text-decoration:none;font-size:clamp(15px,4vw,17px);font-weight:700;
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  transition:transform .15s ease,filter .15s ease
+}
+.cta:hover{filter:brightness(1.04)}
+.cta:active{transform:translateY(1px)}
+
+@media(min-width:768px){
+  .landing{max-width:520px;box-shadow:0 0 4rem rgba(0,0,0,.45)}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
