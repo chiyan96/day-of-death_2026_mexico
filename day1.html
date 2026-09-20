@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="zh-HK"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><title>Day 01</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#0b0d11;color:#fff}body{font-family:"Trebuchet MS",Arial,"Noto Sans TC",sans-serif}.phone{width:100%;max-width:430px;min-height:100dvh;margin:auto;background:#000;padding:max(14px,env(safe-area-inset-top)) clamp(14px,4vw,20px) max(24px,env(safe-area-inset-bottom))}.head{display:grid;grid-template-columns:44px 1fr;align-items:center}.back{width:44px;height:44px;display:grid;place-items:center;color:#fff;text-decoration:none;font-size:32px}.title{font-size:18px;font-weight:700}.city{font-size:13px;margin-top:2px}.rule{height:1px;background:#252525;margin:8px 0}.item{display:grid;grid-template-columns:36px minmax(68px,.7fr) minmax(0,1.5fr);gap:9px;align-items:start;padding:11px 0;border-bottom:1px solid #171717}.icon{font-size:25px;text-align:center;filter:grayscale(1) brightness(3)}.time{font-size:14px;color:#d7d7d7;padding-top:3px}.event{font-size:15px;line-height:1.35;min-width:0}.event small{display:block;color:#ddd;margin-top:2px}.expand{width:100%;padding:0;border:0;background:none;color:#fff;font:inherit;text-align:left;cursor:pointer}.row{display:flex;align-items:center;gap:6px}.badge{font-size:10px;color:#ffbd2e;font-weight:700}.chev{margin-left:auto;color:#ffbd2e;font-size:19px;transition:.2s}.expand[aria-expanded=true] .chev{transform:rotate(90deg)}.detail{grid-column:1/-1;display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s}.detail.open{grid-template-rows:1fr}.inside{overflow:hidden}.card{margin:7px 0 5px;padding:15px;border:1px solid #444;border-radius:14px;background:linear-gradient(#111,#050505)}.dh{display:flex;gap:10px;align-items:center;margin-bottom:12px}.skull{width:40px;height:40px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;font-size:25px}.card h2{font-size:18px;margin:0}.sub{font-size:12px;color:#bbb}.lead{font-size:14px!important;color:#f3c85b!important;font-weight:700}.card p{font-size:15px;line-height:1.55;color:#eee;margin:0 0 11px}.legend{display:grid;grid-template-columns:27px 1fr;gap:9px;padding:10px 0;border-top:1px solid #242424}.num{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#f2d36d;color:#111;font-weight:700;font-size:12px}.legend h3{font-size:14px;color:#f2d36d;margin:2px 0 5px}.legend p{margin:0}.note{border:1px solid #e3ad27;border-radius:10px;padding:10px;font-size:14px;line-height:1.45;color:#ddd;margin-top:8px}.waves{height:7px;width:82%;margin:16px auto 0;border-radius:20px;background:linear-gradient(90deg,#20c7c8 0 33%,#ff477e 33% 66%,#ffbd2e 66%)}@media(max-width:350px){.phone{padding-inline:11px}.item{grid-template-columns:32px 63px minmax(0,1fr);gap:6px}.event{font-size:14px}.time{font-size:13px}}
+
+.banner-top{display:block;width:100%;height:auto;margin:4px auto 8px}
+.icon{display:grid;place-items:center;width:32px;height:32px;filter:none}
+.icon img{display:block;width:30px;height:30px;object-fit:contain}
+.bottom-day{display:block;width:100%;height:auto;margin:14px auto 0}
+.badge{display:none}
+.skull{background:#fff;overflow:hidden}.skull img{width:31px;height:31px;object-fit:contain}.day-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:16px 0 0}.day-nav-btn{min-width:96px;min-height:44px;padding:10px 15px;border:1px solid #3b3b3b;border-radius:999px;background:#0b0b0b;color:#fff;font:700 13px "Trebuchet MS",Trebuchet,Arial,sans-serif}.day-nav-btn.next{border-color:#e5ad28;color:#ffd05a}.bottom-day{display:block;width:calc(100% + 2 * clamp(14px,4vw,20px));max-width:none;height:auto;margin:0 calc(-1 * clamp(14px,4vw,20px)) calc(-1 * max(24px,env(safe-area-inset-bottom)))}@media(max-width:350px){.bottom-day{width:calc(100% + 22px);margin-left:-11px;margin-right:-11px}}
+.scenery-frame{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  margin:16px 0 0;
+  overflow:hidden;
+}
+.scenery-photo{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:10px;
+}
+.frame-overlay{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  pointer-events:none;
+}
+.day-nav{margin-top:8px}
+.day-nav-btn,
+.day-nav-btn.next{
+  border:0 !important;
+  background:transparent !important;
+  padding-inline:4px;
+  min-width:auto;
+  box-shadow:none !important;
+}
+.skull{
+  width:52px;
+  height:52px;
+  background:transparent !important;
+  border-radius:0 !important;
+  overflow:visible;
+  flex:0 0 52px;
+}
+.skull img{
+  width:50px;
+  height:50px;
+  object-fit:contain;
+}
+
+.scenery-frame{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  margin:16px 0 0;
+  overflow:hidden;
+  border-radius:12px;
+  clip-path:inset(0 round 12px);
+}
+.scenery-photo{
+  position:absolute;
+  inset:3.5%;
+  width:93%;
+  height:93%;
+  object-fit:cover;
+  border-radius:10px;
+  z-index:1;
+}
+.frame-overlay{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  z-index:2;
+  pointer-events:none;
+}
+.day-nav{
+  padding-inline:clamp(18px,7vw,30px);
+}
+.day-nav-btn,
+.day-nav-btn.next{
+  margin-inline:0;
+}
+
+.pier-story{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid #2a2a2a;
+}
+.pier-story h3{
+  margin:0 0 7px;
+  font-size:15px;
+  color:#f2d36d;
+}
+.pier-story p{
+  margin:0;
+}
+</style><link href="../shared/transitions.css" rel="stylesheet"/><script defer="True" src="../shared/transitions.js"></script><link href="../shared/trip-log.css" rel="stylesheet"/><script defer="" src="../shared/trip-log.js"></script></head><body><main class="phone day-page" data-nav-surface="">
+<header class="head"><a aria-label="Back to itinerary overview" class="back" data-transition="flip-close" href="../itinerary/page2.html">‹</a><div><div class="title">Day 01</div><div class="city">Puerto Vallarta (PVR)</div></div></header>
+<img alt="" aria-hidden="true" class="banner-top" decoding="async" fetchpriority="high" height="337" loading="eager" sizes="(max-width: 430px) 100vw, 430px" src="../assets_unified/banner_top-42467f44-960.webp" srcset="../assets_unified/banner_top-42467f44-480.webp 480w, ../assets_unified/banner_top-42467f44-960.webp 960w" width="1240"/><div class="day-content-transition" data-day-transition-layer=""><div class="rule"></div><section>
+<div class="item"><div class="icon"><img alt="" decoding="async" height="1119" sizes="64px" src="../assets_unified/icon_plane_c-c8167d33-96.webp" srcset="../assets_unified/icon_plane_c-c8167d33-96.webp 96w, ../assets_unified/icon_plane_c-c8167d33-192.webp 192w" width="1119"/></div><div class="time">07:55 – 14:05</div><div class="event"><b>Flight to PVR</b><small>F82800</small></div></div>
+<div class="item"><div class="icon"><img alt="" decoding="async" height="1254" sizes="64px" src="../assets_unified/icon_hotel-ddeabad9-96.webp" srcset="../assets_unified/icon_hotel-ddeabad9-96.webp 96w, ../assets_unified/icon_hotel-ddeabad9-192.webp 192w" width="1254"/></div><div class="time">15:00 – 15:30</div><div class="event"><b>Check in</b></div></div>
+<div class="item"><div class="icon"><img alt="" decoding="async" height="1254" sizes="64px" src="../assets_unified/icon_taco-9abe828e-96.webp" srcset="../assets_unified/icon_taco-9abe828e-96.webp 96w, ../assets_unified/icon_taco-9abe828e-192.webp 192w" width="1254"/></div><div class="time">15:30 – 16:30</div><div class="event"><b>Lunch</b></div></div>
+<div class="item"><div class="icon"><img alt="" decoding="async" height="235" sizes="64px" src="../assets_unified/icon_wave_c-ca283e3a-96.webp" srcset="../assets_unified/icon_wave_c-ca283e3a-96.webp 96w, ../assets_unified/icon_wave_c-ca283e3a-192.webp 192w" width="235"/></div><div class="time">16:30 – 18:00</div><div class="event"><button aria-controls="detail" aria-expanded="false" class="expand"><span class="row"><b>Playa Los Muertos Beach</b><span class="chev">›</span></span></button></div>
+<div class="detail" id="detail"><div class="inside"><article class="card">
+<div class="dh">
+<div class="skull"><img alt="" decoding="async" height="1065" sizes="64px" src="../assets_unified/icon_sk_day1-94c7253d-96.webp" srcset="../assets_unified/icon_sk_day1-94c7253d-96.webp 96w, ../assets_unified/icon_sk_day1-94c7253d-192.webp 192w" width="1065"/></div>
+<div>
+<h2>Playa Los Muertos</h2>
+<div class="sub">一個名字，三個傳說</div>
+</div>
+</div>
+<p>「Los Muertos」即係「死者」。呢個海灘點解有一個咁特別嘅名？至今冇一個版本有確鑿證據，但流傳住三個主要說法：</p>
+<div class="legend">
+<div class="num">1</div>
+<div>
+<h3>原住民墓地說</h3>
+<p>據說呢一帶曾經發現人類遺骸同陶器，因此有人認為昔日係原住民安葬先人嘅地方。</p>
+</div>
+</div>
+<div class="legend">
+<div class="num">2</div>
+<div>
+<h3>海盜衝突說</h3>
+<p>傳說海盜曾經上岸搶掠，居民奮力抵抗，其中一次衝突造成多人死亡，海灘因而得到「Los Muertos」之名。</p>
+</div>
+</div>
+<div class="legend">
+<div class="num">3</div>
+<div>
+<h3>礦產運輸衝突說</h3>
+<p>另一版本就同 Cuale 河一帶嘅礦產運輸有關，據說一次武裝衝突造成死傷，名字亦由此而來。</p>
+</div>
+</div>
+<div class="pier-story">
+<h3>Los Muertos Pier</h3>
+<p>海灘上最搶眼嘅 <strong>Los Muertos Pier</strong>，現時版本於 <strong>2013 年</strong>落成，由建築師 <strong>José de Jesús Torres Vega</strong> 設計，取代昔日木碼頭。中央金屬結構以<strong>船帆</strong>為靈感，今日已經成為 Puerto Vallarta 最具代表性嘅城市標誌之一。</p>
+</div>
+</article></div></div></div>
+<div class="item"><div class="icon"><img alt="" decoding="async" height="1065" sizes="64px" src="../assets_unified/icon_sk_day1-94c7253d-96.webp" srcset="../assets_unified/icon_sk_day1-94c7253d-96.webp 96w, ../assets_unified/icon_sk_day1-94c7253d-192.webp 192w" width="1065"/></div><div class="time">18:00 – 20:00</div><div class="event"><b>Romantic Zone Citywalk</b></div></div>
+<div class="item"><div class="icon"><img alt="" decoding="async" height="1254" sizes="64px" src="../assets_unified/icon_taco-9abe828e-96.webp" srcset="../assets_unified/icon_taco-9abe828e-96.webp 96w, ../assets_unified/icon_taco-9abe828e-192.webp 192w" width="1254"/></div><div class="time">20:00 – 21:00</div><div class="event"><b>Dinner</b></div></div>
+</section><figure aria-label="Puerto Vallarta scenery" class="scenery-frame">
+<img alt="Puerto Vallarta coastline" class="scenery-photo" decoding="async" height="437" loading="lazy" sizes="(max-width: 430px) 100vw, 430px" src="../assets_unified/day6_scenery-32913082-480.webp" srcset="../assets_unified/day6_scenery-32913082-480.webp 480w" width="780"/>
+<img alt="" aria-hidden="true" class="frame-overlay" decoding="async" height="841" loading="lazy" sizes="(max-width: 430px) 100vw, 430px" src="../assets_unified/image_frame-f927bb8e-960.webp" srcset="../assets_unified/image_frame-f927bb8e-480.webp 480w, ../assets_unified/image_frame-f927bb8e-960.webp 960w" width="1600"/>
+</figure></div><nav aria-label="Day navigation" class="day-nav day-nav-flow"><a class="day-nav-btn" data-transition="flip-close" href="../itinerary/page2.html">‹ Back</a><a class="day-nav-btn next" data-transition="next" href="../day2/day2.html">Day 2 ›</a></nav>
+</main><img alt="" aria-hidden="true" class="bottom-day fixed-bottom-art" decoding="async" fetchpriority="auto" height="107" loading="eager" sizes="(max-width: 430px) 100vw, 430px" src="../assets_unified/bottom_day1-3565aa9e-960.webp" srcset="../assets_unified/bottom_day1-3565aa9e-480.webp 480w, ../assets_unified/bottom_day1-3565aa9e-960.webp 960w" width="1241"/>
+<script>const b=document.querySelector(".expand"),d=document.querySelector("#detail");b.onclick=()=>{const o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",!o);d.classList.toggle("open",!o)}</script></body></html>
+<style>
+.skull{
+  width:48px;
+  height:48px;
+  border-radius:0;
+  background:transparent !important;
+  overflow:visible;
+  flex:0 0 48px;
+}
+.skull img{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+}
+
+.scenery-frame{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  margin:16px 0 0;
+  overflow:hidden;
+}
+.scenery-photo{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:10px;
+}
+.frame-overlay{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  pointer-events:none;
+}
+.day-nav{margin-top:8px}
+.day-nav-btn,
+.day-nav-btn.next{
+  border:0 !important;
+  background:transparent !important;
+  padding-inline:4px;
+  min-width:auto;
+  box-shadow:none !important;
+}
+.skull{
+  width:52px;
+  height:52px;
+  background:transparent !important;
+  border-radius:0 !important;
+  overflow:visible;
+  flex:0 0 52px;
+}
+.skull img{
+  width:50px;
+  height:50px;
+  object-fit:contain;
+}
+
+.scenery-frame{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  margin:16px 0 0;
+  overflow:hidden;
+  border-radius:12px;
+  clip-path:inset(0 round 12px);
+}
+.scenery-photo{
+  position:absolute;
+  inset:3.5%;
+  width:93%;
+  height:93%;
+  object-fit:cover;
+  border-radius:10px;
+  z-index:1;
+}
+.frame-overlay{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  z-index:2;
+  pointer-events:none;
+}
+.day-nav{
+  padding-inline:clamp(18px,7vw,30px);
+}
+.day-nav-btn,
+.day-nav-btn.next{
+  margin-inline:0;
+}
+
+.pier-story{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid #2a2a2a;
+}
+.pier-story h3{
+  margin:0 0 7px;
+  font-size:15px;
+  color:#f2d36d;
+}
+.pier-story p{
+  margin:0;
+}
+</style>
